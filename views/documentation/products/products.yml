@@ -1,0 +1,37 @@
+Retrieves a list of all products or based on search parameter
+---
+tags:
+  - Products
+parameters:
+  - name: search
+    in: query
+    type: string
+    required: false
+    description: searched product
+
+responses:
+  200:
+    description: request executed successful
+    schema:
+      type: array
+      items:
+        properties:
+          id:
+            type: integer
+            description: product id
+          name:
+            type: string
+            description: product name
+          url_image:
+            type: string
+            description: image url
+          price:
+            type: number
+            description: product price
+          discount:
+            type: integer
+            description: product discount
+          category:
+            type: integer
+            description: product's category id
+            
