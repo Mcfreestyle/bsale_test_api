@@ -11,7 +11,7 @@ from engine.db_storage import DBStorage
 @app_views.route('/products', methods=['GET'])
 async def get_products():
   """
-    Get all products
+    file: documentation/products/products.yml
   """
   storage = DBStorage()
 
@@ -25,9 +25,7 @@ async def get_products():
 @app_views.route('/categories/<int:category_id>/products', methods=['GET'])
 async def get_products_by_category(category_id):
   """
-    Get all products of a category
-      Args:
-        category_id(int): category id
+    file: documentation/products/products_by_category.yml
   """
   storage = DBStorage()
   category = await storage.get('category', category_id)
