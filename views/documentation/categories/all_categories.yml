@@ -1,0 +1,18 @@
+Retrieves a list of all categories
+---
+tags:
+  - Categories
+
+responses:
+  200:
+    description: request executed successful
+    schema:
+      type: array
+      items:
+        properties:
+          id:
+            type: integer
+            description: category id
+          name:
+            type: string
+            description: category name
