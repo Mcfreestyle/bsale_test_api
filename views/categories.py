@@ -9,7 +9,7 @@ from engine.db_storage import DBStorage
 @app_views.route('/categories', methods=['GET'])
 async def get_categories():
   """
-    Get all categories
+    file: documentation/categories/all_categories.yml
   """
   storage = DBStorage()
   categories = await storage.all('category')
